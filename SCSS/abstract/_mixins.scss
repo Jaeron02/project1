@@ -18,7 +18,7 @@
     grid-gap: $gap;
 }
 
-@mixin absolute($Top:0,$right:0,$bottom:0,$left:0){
+@mixin absolute($top:0,$right:0,$bottom:0,$left:0){
   position: absolute;
   top: $top ;
   left: $left;
@@ -26,7 +26,7 @@
   right: $right;
 }
 
-@mixin flex($justify:flex-start, $align: flex-start){
+@mixin flex($justify:flex-start, $align:flex-start){
   display: flex;
   justify-content: $justify;
   align-items: $align;

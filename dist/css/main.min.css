@@ -322,8 +322,11 @@ h1 {
   font-size: 1.2rem;
 }
 .footer__actions ul li img {
-  width: 80%;
+  width: 45%;
   margin-bottom: 0.5rem;
+}
+.footer__actions ul li a {
+  font-size: larger;
 }
 .footer__actions img {
   justify-self: center;
@@ -424,7 +427,7 @@ h1 {
 }
 
 .banner {
-  min-height: 50rem;
+  min-height: 40rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -484,11 +487,13 @@ h1 {
 }
 .category__card h5 {
   position: absolute;
-  bottom: 0;
+  top: unset;
   left: 50%;
+  bottom: unset;
+  right: unset;
   transform: translate(-50%);
   text-wrap: nowrap;
-  font-size: clam(1.2rem, 2vw, 2rem);
+  font-size: clamp(1.2rem, 2vw, 2rem);
 }
 
 .quality {
@@ -528,10 +533,12 @@ h1 {
   }
 }
 .quality__card h4 {
+  font-size: 2rem;
   position: absolute;
   top: 5rem;
+  left: unset;
+  bottom: unset;
   right: 5rem;
-  font-size: 2rem;
 }
 .quality__card p {
   margin-bottom: 0;
@@ -541,4 +548,66 @@ h1 {
     font-size: 1.4rem;
     min-height: 20rem;
   }
+}
+
+.button1 {
+  background-color: #ffbc0d;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 6rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.button1 a:hover {
+  color: rgb(51, 50, 50);
+}
+
+.banner {
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.banner h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: bolder;
+}
+
+.banner--family {
+  background-image: url("../../images/family/bannersmall.jpeg");
+}
+
+.activity {
+  padding: 4rem 0;
+}
+.activity__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1rem;
+}
+.activity__cards img {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+.activity__cards h2 {
+  font-size: clamp(3rem, 4vw, 7rem);
+  font-weight: bolder;
+}
+.activity__cards p {
+  text-align: justify;
+  margin-bottom: 4rem;
+  margin-top: 0.1rem;
+}
+.activity__cards button {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
 }/*# sourceMappingURL=main.min.css.map */

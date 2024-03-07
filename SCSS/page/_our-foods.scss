@@ -1,6 +1,6 @@
 @use '../abstract' as *;
 
-@use '../abstract/' as *;
+
 
 .banner{
     min-height: 40rem;
@@ -18,8 +18,7 @@
 .banner--food{
     background-image: url('../../images/our food/bannersm.jpg');
     @mixin mediaQuery{
-        background-image: url('../../images/our food/bannerl.jpg');;
-
+        background-image: url('../../images/our food/bannerl.jpg');
     }
 }
 
@@ -32,7 +31,7 @@
         }
         a{
             justify-self: center;
-        };
+        }
     }
     &__card{
         position: relative;
