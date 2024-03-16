@@ -1,58 +1,43 @@
 @use '../abstract' as *;
 @use '../component' as *;
 
-
-.banner{
-    min-height: 40rem;
-    @include flex (center,center);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    h1{
-        font-size: clamp(3rem, 10vw, 7rem);
-        font-weight: bolder;
-    }
-}
-.banner--family{
+.banner--activity {
     background-image: url('../../images/family/bannersmall.jpeg');
-    @mixin mediaQuery{
-    background-image: url('../../images/family/bannerbig.jpeg');
+    @include mediaQuery {
+        background-image: url('../../images/family/bannerbig.jpeg');
     }
 }
 
-.activity{
-    padding: 4rem 0;
-    &__wrapper{
-        @include grid(1);
-        
-    }
+.activity {
+    &__card {
+        @include mediaQuery {
+            @include unevenGrid(1fr 2fr, 5rem); 
+            margin-bottom: 5rem;
 
-    &__cards{
-        img{
-        position: relative;
-        border-radius: 1.5rem;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        margin-bottom: 1rem;
-        margin-top: 3rem;
         }
-        h2{
-        font-size: clamp(3rem, 4vw, 7rem);
-        font-weight: bolder;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            div {
+                flex-grow: 1;
+            }
+
         }
-        p{
-            text-align: justify;
-            margin-bottom: 4rem;
-            margin-top: .1rem;
-            
+        img {
+            @include imgCover(100%, 100%);
+            border-radius: 1rem;
         }
-        button{
-          margin-bottom: 2rem; 
-          margin-top: 4rem; 
+
+
+        h2 {
+            font-size: clamp(2rem, 8vw, 4rem);
         }
-    
+
+        .btn {
+            @include mediaQuery {
+                width: 50%
+            }
+        }
     }
-        
-   
 }

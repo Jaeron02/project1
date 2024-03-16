@@ -1,20 +1,28 @@
 @use '../abstract' as *;
-
-.button1 {
-     background-color: $clr-primary; 
-    border: none;
+.btn {
+    padding: 1.5rem 2.5rem;
+    margin: 2rem 0;
     border-radius: 1rem;
-    padding: 1rem 6rem;
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bolder; 
+    font-family: "Speedee-Bold";
+    @include flex(center, center);
+    line-height: 1;
+    transition: .5s ease;
+    text-transform: uppercase;
+   
+    $colors: (
+    "primary" : $clr-primary,
+    "accent" : $clr-accent,
+    "neutral" : $clr-neutral,
+    "dark" : $clr-dark,
+    );
 
-    a:hover{
-    color: rgb(51, 50, 50) ;
+    @each $key, $val in $colors {
+
+    &-#{$key} {
+        background: #{$val};
+        &:hover {
+            background: #{$val};
+            }
+        }
     }
-
 }
-
-
-
-  
